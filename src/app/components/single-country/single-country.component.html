@@ -1,8 +1,42 @@
 <div class="container-fluid">
-  <img src="{{ country.flags.png }}" alt="" />
-  <p>{{ country.name.official }}</p>
-  <p>{{ country.capital }}</p>
-  <p>{{ country.subregion }}</p>
-  <p>{{ country.population }}</p>
-  <p>{{ country.currency }}</p>
+  <div class="column">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="{{ selectedCountry.flags.png }}" alt="" />
+      </div>
+      <div class="col-xs-12">
+        <h1>{{ selectedCountry.altSpellings[0] }}</h1>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="col-xs-6">
+        <p>
+          Waluta: <b>{{ selectedCountry.currencies[0].name }}</b> (
+          {{ selectedCountry.currenciesShortcut[0] }} )
+        </p>
+      </div>
+
+      <div class="col-xs-6">
+        <p>
+          Pełna Nazwa: <b>{{ selectedCountry.name.official }}</b>
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p>
+          Stolica: <b>{{ selectedCountry.capital }}</b>
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p>
+          Region: <b>{{ selectedCountry.subregion }}</b>
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p>
+          Populajca: <b>{{ selectedCountry.population }}</b>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,16 +1,39 @@
-<ul>
-  CONTINENTS
-  <li (click)="getContinent(Regions.EUROPE)" routerLink="/country-list">
-    EUROPE
-  </li>
-  <li (click)="getContinent(Regions.AFRICA)" routerLink="/country-list">
-    AFRICA
-  </li>
-  <li (click)="getContinent(Regions.ASIA)" routerLink="/country-list">ASIA</li>
-  <li (click)="getContinent(Regions.OCEANIA)" routerLink="/country-list">
-    OCEANIA
-  </li>
-  <li (click)="getContinent(Regions.AMERICAS)" routerLink="/country-list">
-    AMERICAS
-  </li>
-</ul>
+<h3>Wybierz Region</h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12" (click)="getContinent(Regions.AFRICA)">
+      <h1>Afryka</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Africa_blank_black.svg/961px-Africa_blank_black.svg.png"
+        alt=""
+      />
+    </div>
+    <div class="col-xs-12" (click)="getContinent(Regions.AMERICAS)">
+      <h1>Ameryki</h1>
+      <img
+        src="https://cdn.pixabay.com/photo/2018/03/14/18/35/americas-3225976_1280.png"
+        alt=""
+      />
+    </div>
+    <div class="col-xs-12" (click)="getContinent(Regions.ASIA)">
+      <h1>Azja</h1>
+      <img
+        src="https://key0.cc/images/small/2098700_f636d4d2f29f60f7d08177e3e6d4d3c5.png"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" (click)="getContinent(Regions.EUROPE)">
+      <h1>Europa</h1>
+      <img
+        src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/1453.png"
+        alt=""
+      />
+    </div>
+    <div class="col-xs-12" (click)="getContinent(Regions.OCEANIA)">
+      <h1>Oceania</h1>
+      <img src="https://static.thenounproject.com/png/416785-200.png" alt="" />
+    </div>
+  </div>
+</div>

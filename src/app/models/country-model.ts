@@ -1,6 +1,7 @@
 export interface Country {
   name: {
     official: string;
+    common: string;
   };
 
   capital: string;
@@ -11,8 +12,9 @@ export interface Country {
   status: string;
   independent: boolean;
   borders: [''];
-
-  currency;
+  altSpellings;
+  currencies;
+  currenciesShortcut;
 }
 
 export enum Regions {
