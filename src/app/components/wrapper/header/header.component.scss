@@ -1,0 +1,53 @@
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .back {
+    margin-right: 70px;
+  }
+  .logo {
+    margin-left: 50px;
+    img {
+      width: 50px;
+      cursor: pointer;
+    }
+  }
+}
+.mat-raised-button {
+  background-color: black;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+  transform: translate3d(0, 0, 0);
+  transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+  width: 100px;
+}
