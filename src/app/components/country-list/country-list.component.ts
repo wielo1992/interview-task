@@ -16,7 +16,9 @@ export class CountryListComponent implements OnInit {
     private logic: LogicServiceService
   ) {}
 
-  readonly countryListByRegion$ = this.api.countryListByRegion$;
+  public readonly dataSource = this.api.countryListByRegion$;
+  public readonly displayedColumns = ['Flag'];
+  public readonly chosedContinent = this.api.choosedContinent;
 
   showDetails(country: Country) {
     this.api.selectCountry(country);

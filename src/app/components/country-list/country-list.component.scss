@@ -1,11 +1,48 @@
-.container-fluid {
-  mat-card {
-    display: flex;
-    width: 50%;
-    margin-top: 20px;
+.example-container {
+  height: 400px;
+  overflow: auto;
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
-    img {
-      width: 40px;
+  td.mat-cell {
+    cursor: pointer;
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 100px;
+    background-color: white;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    p {
+      margin-top: 20px;
+      margin-right: 30px;
+      font-size: 20px;
     }
   }
+  td.mat-cell:hover {
+    background-color: whitesmoke;
+  }
+  img {
+    width: 100px;
+    height: 70px;
+    margin-left: 30px;
+    border-style: solid;
+  }
+}
+
+table {
+  width: 100%;
+
+  .name {
+    text-align: center;
+  }
+}
+h3 {
+  text-align: center;
+  margin-top: 50px;
 }
