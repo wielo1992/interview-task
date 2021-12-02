@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -27,6 +30,9 @@ import { LogicServiceComponent } from './services/logic-service/logic-service.co
     LogicServiceComponent,
   ],
   imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
     MatSliderModule,
     BrowserModule,
     NgbModule,
