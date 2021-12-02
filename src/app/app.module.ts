@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -11,10 +12,10 @@ import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
 import { ContinentsComponent } from './components/continents/continents.component';
 import { CountryListComponent } from './components/country-list/country-list.component';
-import { SingleCountryComponent } from './components/single-country/single-country.component';
 import { FooterComponent } from './components/wrapper/footer/footer.component';
 import { HeaderComponent } from './components/wrapper/header/header.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { SingleCountryComponent } from './components/single-country/single-country.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { WrapperComponent } from './components/wrapper/wrapper.component';
     SingleCountryComponent,
   ],
   imports: [
+    MatCardModule,
     HttpClientModule,
     MatIconModule,
     MatButtonModule,
