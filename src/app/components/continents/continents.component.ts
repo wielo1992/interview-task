@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Regions } from 'src/app/models/country-model';
 import { ApiServiceService } from 'src/app/services/api-service.service';
@@ -7,8 +7,9 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
   selector: 'app-continents',
   templateUrl: './continents.component.html',
   styleUrls: ['./continents.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContinentsComponent implements OnInit {
+export class ContinentsComponent {
   constructor(
     private readonly api: ApiServiceService,
     private router: Router
@@ -19,8 +20,5 @@ export class ContinentsComponent implements OnInit {
   getContinent(country: Regions) {
     this.api.countriesByContintent(country);
     this.router.navigate(['country-list']);
-    console.log(country);
   }
-
-  ngOnInit(): void {}
 }
