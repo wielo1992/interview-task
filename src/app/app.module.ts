@@ -3,6 +3,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
 import { ContinentsComponent } from './components/continents/continents.component';
 import { CountryListComponent } from './components/country-list/country-list.component';
@@ -25,7 +26,13 @@ import { LogicServiceComponent } from './services/logic-service/logic-service.co
     ApiServiceComponent,
     LogicServiceComponent,
   ],
-  imports: [MatSliderModule, BrowserModule, NgbModule, BrowserAnimationsModule],
+  imports: [
+    MatSliderModule,
+    BrowserModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
