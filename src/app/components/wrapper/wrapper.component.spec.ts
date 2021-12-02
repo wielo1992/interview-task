@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WrapperComponent } from './wrapper.component';
 
 describe('WrapperComponent', () => {
@@ -8,9 +7,8 @@ describe('WrapperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WrapperComponent ]
-    })
-    .compileComponents();
+      declarations: [WrapperComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
