@@ -1,7 +1,7 @@
-<h3>{{ chosedContinent }}</h3>
+<h3>{{ chosedContinent$ | async }}</h3>
 
 <div class="example-container mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource">
+  <table mat-table [dataSource]="countryListByRegion$">
     <ng-container matColumnDef="Flag">
       <td class="flag" mat-cell *matCellDef="let element">
         <img src="{{ element.flags.png }}" alt="" />
