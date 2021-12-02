@@ -1,8 +1,11 @@
 <div class="container-fluid">
-  <img src="{{ country.flags.png }}" alt="" />
-  <p>{{ country.name.official }}</p>
-  <p>{{ country.capital }}</p>
-  <p>{{ country.subregion }}</p>
-  <p>{{ country.population }}</p>
-  <p>{{ country.currency }}</p>
+  <img src="{{ selectedCountry.flags.png }}" alt="" />
+  <p>{{ selectedCountry.name.official }}</p>
+  <p>{{ selectedCountry.capital }}</p>
+  <p>{{ selectedCountry.subregion }}</p>
+  <p>{{ selectedCountry.population }}</p>
+  <p>{{ selectedCountry.currencies[0].name }}</p>
+  <p>{{ selectedCountry.currencies[0].symbol }}</p>
+  <p>{{ selectedCountry.currenciesShortcut[0] }}</p>
+  <p>{{ selectedCountry.altSpellings[0] }}</p>
 </div>

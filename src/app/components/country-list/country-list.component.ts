@@ -16,11 +16,10 @@ export class CountryListComponent implements OnInit {
     private logic: LogicServiceService
   ) {}
 
-  readonly countryList$ = this.api.contryList$;
+  readonly countryListByRegion$ = this.api.countryListByRegion$;
 
   showDetails(country: Country) {
-    this.router.navigate(['single-country']);
-    this.logic.showSingleCountry(country);
+    this.api.selectCountry(country);
   }
 
   ngOnInit(): void {}

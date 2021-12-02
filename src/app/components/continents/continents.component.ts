@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Regions } from 'src/app/models/country-model';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
@@ -8,12 +9,17 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
   styleUrls: ['./continents.component.scss'],
 })
 export class ContinentsComponent implements OnInit {
-  constructor(private readonly api: ApiServiceService) {}
+  constructor(
+    private readonly api: ApiServiceService,
+    private router: Router
+  ) {}
 
   readonly Regions = Regions;
 
-  getContinent(region: string) {
-    this.api.getContinents(region).subscribe((data) => console.log(data));
+  getContinent(country: Regions) {
+    this.api.countriesByContintent(country);
+    this.router.navigate(['country-list']);
+    console.log(country);
   }
 
   ngOnInit(): void {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Country } from 'src/app/models/country-model';
-import { LogicServiceService } from 'src/app/services/logic-service.service';
+import { ApiServiceService } from 'src/app/services/api-service.service';
 
 @Component({
   selector: 'app-single-country',
@@ -8,11 +8,14 @@ import { LogicServiceService } from 'src/app/services/logic-service.service';
   styleUrls: ['./single-country.component.scss'],
 })
 export class SingleCountryComponent implements OnInit {
-  constructor(private readonly logic: LogicServiceService) {}
+  constructor(private readonly api: ApiServiceService) {}
 
-  country: Country;
-  readonly country$ = this.logic.country$.subscribe(
-    (data) => (this.country = data)
-  );
-  ngOnInit(): void {}
+  selectedCountry: Country;
+
+  ngOnInit(): void {
+    this.api.selectedCountry$.subscribe(
+      (data) => (this.selectedCountry = data)
+    );
+    console.log(this.selectedCountry);
+  }
 }
