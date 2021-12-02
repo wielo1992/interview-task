@@ -1,1 +1,6 @@
-country list works!
+<div class="container-fluid" *ngFor="let country of countryList$ | async">
+  <div class="name-and-flag">
+    <h3>{{ country.name.official }}</h3>
+    <img src="{{ country.flags.png }}" alt="" />
+  </div>
+</div>

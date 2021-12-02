@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +27,7 @@ import { WrapperComponent } from './components/wrapper/wrapper.component';
     SingleCountryComponent,
   ],
   imports: [
+    HttpClientModule,
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
