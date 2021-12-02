@@ -18,4 +18,9 @@ export class ApiServiceService {
       .get<Country[]>(`https://restcountries.com/v3.1/region/${region}`)
       .pipe(tap((res) => this.countryList.next(res)));
   }
+
+  gettingCurrencyShortcut() {
+    const currency = this.countryList.value.map((country) => country.currency);
+    Object.keys(currency);
+  }
 }
