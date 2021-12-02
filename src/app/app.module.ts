@@ -14,8 +14,6 @@ import { SingleCountryComponent } from './components/single-country/single-count
 import { FooterComponent } from './components/wrapper/footer/footer.component';
 import { HeaderComponent } from './components/wrapper/header/header.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
-import { ApiServiceComponent } from './services/api-service/api-service.component';
-import { LogicServiceComponent } from './services/logic-service/logic-service.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +24,6 @@ import { LogicServiceComponent } from './services/logic-service/logic-service.co
     ContinentsComponent,
     CountryListComponent,
     SingleCountryComponent,
-    ApiServiceComponent,
-    LogicServiceComponent,
   ],
   imports: [
     MatIconModule,
