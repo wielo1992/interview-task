@@ -19,16 +19,17 @@ export class ApiServiceService {
   private readonly countryListByRegion = new BehaviorSubject<Country[]>([]);
   readonly countryListByRegion$ = this.countryListByRegion.asObservable();
 
-  public choosedContinent: Regions;
+  private readonly choosedContinent = new BehaviorSubject<Regions>(null);
+  readonly choosedContinent$ = this.choosedContinent.asObservable();
 
-  getContinent2() {
+  getContinent() {
     return this.http
       .get<Country[]>('https://restcountries.com/v3.1/all')
       .pipe(tap((data) => this.countryList.next(data)));
   }
 
-  countriesByContintent(country: Regions) {
-    switch (country) {
+  countriesByContintent(continent: Regions) {
+    switch (continent) {
       case Regions.AFRICA:
         const afrikaCountries: Country[] = this.countryList.value.filter(
           (country) => country.region === Regions.AFRICA
@@ -59,7 +60,7 @@ export class ApiServiceService {
         );
         this.countryListByRegion.next(asiaCountiures);
     }
-    this.choosedContinent = country;
+    this.choosedContinent.next(continent);
     this.countryListByRegion.value.sort((a, b) => {
       if (a.name.common < b.name.common) {
         return -1;

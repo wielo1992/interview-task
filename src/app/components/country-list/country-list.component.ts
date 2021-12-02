@@ -11,9 +11,9 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 export class CountryListComponent {
   constructor(private readonly api: ApiServiceService) {}
 
-  public readonly dataSource = this.api.countryListByRegion$;
-  public readonly displayedColumns = ['Flag'];
-  public readonly chosedContinent = this.api.choosedContinent;
+  readonly countryListByRegion$ = this.api.countryListByRegion$;
+  readonly displayedColumns = ['Flag'];
+  readonly chosedContinent$ = this.api.choosedContinent$;
 
   showDetails(country: Country) {
     this.api.selectCountry(country);

@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogContentComponent } from '../dialog-content/dialog-content.component';
 
 @Component({
   selector: 'app-footer',
@@ -7,5 +9,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  constructor() {}
+  constructor(private readonly dialog: MatDialog) {}
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContentComponent);
+    dialogRef;
+  }
 }

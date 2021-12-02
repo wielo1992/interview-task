@@ -1,0 +1,67 @@
+.container-fluid {
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .wrapper {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .text {
+      width: 50%;
+      text-align: center;
+
+      p {
+        font-size: 13px;
+        margin-bottom: 100px;
+        font-weight: 800;
+      }
+    }
+
+    .photo-roll {
+      width: 250px;
+      height: 400px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: 1s;
+      justify-content: center;
+
+      .photo-roll-img {
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: url(https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.6435-9/188797920_2909624725976687_7184479579212444675_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=4U_CsC8JJnIAX84yOtS&_nc_ht=scontent.fwaw3-2.fna&oh=4fe76137a14045925b58487bdeb39f57&oe=61CDA8FE);
+        background-size: cover;
+        border-radius: 20px;
+        transform: translateZ(40px);
+      }
+      .photo-roll-body {
+        border-radius: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, -40px) rotateY(180deg);
+        width: 100%;
+        height: 100%;
+        background: url(https://www.gettingsmart.com/wp-content/uploads/2017/06/Program-Code-Feature-Image.jpg);
+        overflow: hidden;
+        border: 5px solid whitesmoke;
+      }
+    }
+    .photo-roll:hover {
+      transform: rotateY(180deg);
+    }
+
+    p {
+      margin-top: 70px;
+      font-weight: 300;
+      font-family: monospace;
+      letter-spacing: 3px;
+      font-size: 30px;
+    }
+  }
+}

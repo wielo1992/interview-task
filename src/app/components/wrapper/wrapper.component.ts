@@ -6,6 +6,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./wrapper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WrapperComponent {
-  constructor() {}
-}
+export class WrapperComponent {}
