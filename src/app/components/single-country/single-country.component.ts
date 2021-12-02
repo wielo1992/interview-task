@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Country } from 'src/app/models/country-model';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
@@ -6,6 +6,7 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
   selector: 'app-single-country',
   templateUrl: './single-country.component.html',
   styleUrls: ['./single-country.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleCountryComponent implements OnInit {
   constructor(private readonly api: ApiServiceService) {}
@@ -16,6 +17,5 @@ export class SingleCountryComponent implements OnInit {
     this.api.selectedCountry$.subscribe(
       (data) => (this.selectedCountry = data)
     );
-    console.log(this.selectedCountry);
   }
 }
